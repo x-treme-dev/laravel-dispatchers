@@ -1,0 +1,5 @@
+ @include('dispatchers.header')
+ @include('dispatchers.nav')
+ @include('dispatchers.main')
+ @yield('content')
+ @include('dispatchers.footer')

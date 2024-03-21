@@ -1,0 +1,144 @@
+ 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ECF0F1;
+    height: 100%;  
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 85vw;
+    max-width: 1250px;
+    margin: 0 auto 0 auto;
+}
+
+/*---------------------------------------------nav-menu---------------------------------------------------*/
+/*backgound of nav-menu*/
+.nav__menu{
+    background-color:#8ECBF3;
+    height: 9.5vh;
+    min-height: 100px;
+    padding-top:3px;
+    
+}
+
+.nav__wrapper, .nav__logo, .footer, .footer__logo{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.nav__img{
+  display: block;
+}
+
+.nav__wrapper{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav__dropdown-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nav__login{
+    color:#136295;
+}
+ 
+.nav__p-white, .nav__p-blue{
+    text-align: center;
+}
+
+.nav__p-white{
+    color:#fff;
+}
+
+.nav__p-blue{
+    color: #136295;
+    padding-top:7%;
+    font-weight:600;
+}
+
+
+/*--------выпадающее меню--------*/
+ /* Кнопка выпадающего списка */
+.nav__dropbtn {
+    width: 160px;
+    background-color: #39A1E6;
+    color: white;
+    padding: 16px;
+    font-size: 1em;
+    border: none;
+  }
+  
+  /* Контейнер <div> - необходим для размещения выпадающего содержимого */
+  .nav__dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Выпадающее содержимое (скрыто по умолчанию) */
+  .nav__content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Ссылки внутри выпадающего списка */
+  .nav__content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Изменение цвета выпадающих ссылок при наведении курсора */
+  .nav__content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Показать выпадающее меню при наведении курсора */
+  .nav__dropdown:hover .nav__content {
+    display: block;
+  }
+  
+  /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+  .nav__dropdown:hover .nav__dropbtn {
+    background-color: #FF1E00;
+   }
+
+   .main{
+     height: 80vh;
+   }
+
+   /*--------------------------------------------footer---------------------------------------------*/
+    .footer{
+    height: 9.4vh;
+    background-color: #39A1E6;
+    }
+
+   
+  .footer .voda-logo{
+      width: 100px;
+      height: auto;
+   }
+
+  .footer .telegram-logo{
+    width: 40px;
+    height: auto;
+   }
+
+  
+ 
+ 
