@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // Диспетчеры: главная страница
 Route::get('/', function () {
-    return view('dispatchermain');
+    return view('dispatchersmain');
 });
 
 Route::get('/tapwaterticket', function () {

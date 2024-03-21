@@ -1,5 +1,5 @@
 <!---------------------------------footer of html-page---------------------------->
-<footer>
+ <footer>
     <div class='footer'>
         <div class="container">
             <div class="footer__logo">

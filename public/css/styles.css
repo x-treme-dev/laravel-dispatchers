@@ -10,6 +10,7 @@ body{
     height: 100%;  
     font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
 }
 
 .container{
@@ -22,16 +23,14 @@ body{
 /*backgound of nav-menu*/
 .nav__menu{
     background-color:#8ECBF3;
-    height: 9.5vh;
+    height: 10vh;
     min-height: 100px;
-    padding-top:3px;
-    
 }
 
 .nav__wrapper, .nav__logo, .footer, .footer__logo{
     display: flex;
     align-items: center;
-    gap:20px;
+    column-gap:20px;
 }
 
 .nav__img{
@@ -46,7 +45,7 @@ body{
 .nav__dropdown-group{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    column-gap: 30px;
 }
 
 .nav__login{
@@ -118,13 +117,15 @@ body{
     background-color: #FF1E00;
    }
 
+   /*---------------------------------------------main----------------------------------*/
+
    .main{
-     height: 80vh;
+     height: 80vh; /*nav = height: 10vh*/
    }
 
    /*--------------------------------------------footer---------------------------------------------*/
     .footer{
-    height: 9.4vh;
+    height: 10vh; 
     background-color: #39A1E6;
     }
 
