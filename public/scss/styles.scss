@@ -1,0 +1,181 @@
+@import '_variables';
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 20px;
+}
+
+@mixin link{
+    text-decoration: none;
+    color: $link-color-white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ECF0F1; 
+    font-size: $font-size-all;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 85vw;
+    max-width: 1250px;
+    margin: 0 auto 0 auto;
+}
+
+/*-----------------------top---------------------------------------*/
+.top{
+    @include flex;
+    background-color: $bg-color-blue;
+    height: 10vh;
+    min-height: 100px;
+
+    &__wrapper{
+        @include flex;
+        justify-content: space-between;
+    }
+
+    &__img{
+        display: block;
+    }
+
+    &__logo{
+        @include flex;
+    }
+
+    &__h2{
+        color: #136295;
+    }
+
+    &__p-white, &__p-blue{
+        text-align: center;
+    }
+
+    &__p-white{
+        color: $link-color-white;
+    }
+
+    &__p-blue{
+        color: $login-color-blue;
+        font-weight: $font-bold;
+        padding-top: $offset-7;
+    }
+
+    &__a-exit{
+        @include link;
+    }
+     
+    &__exit{
+        text-align: center;
+        padding-top: $offset-4;
+    }
+}
+
+/*---------------top-resize-----------------------*/
+
+.top-resize{
+    height: 5vh;
+    background-color: $bg-color-blue;
+}
+
+/*-----------------------main menu (dispatchers)------------------*/
+ 
+  .menu__wrapper{
+    @include flex;
+    justify-content: center;
+  }
+
+  .menu {
+    width: 20rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-top: $offset-7;
+    
+    &__a, &__btn{
+        @include link;
+      }
+      
+      &__item {
+        list-style: none;
+        border-top: 1px solid #fff;
+        overflow: hidden;
+      }
+      
+      &__btn {
+        display: block;
+        padding: 1rem 1.2rem;
+        background: $bg-color-blue;
+        position: relative;
+      }
+      
+      &__btn::before {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background: $bg-color-blue;
+        left: 1.5rem;
+        bottom: -0.5rem;
+        transform: rotate(45deg);
+      }
+      
+      &__btn i {
+        margin-right: 1rem;
+      }
+      
+      &__item_sub {
+        background: #D6EAF8;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        max-height: 0;
+      }
+      
+      &__item_sub a {
+        display: block;
+        padding: 1rem 1.6rem;
+        color: $login-color-blue;
+        position: relative;
+        border-bottom: 1px solid $bg-color-blue;
+      }
+      
+      &__item_sub a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.4rem;
+        height: 100%;
+        background: $login-color-blue;
+        transform: translatex(-0.4rem);
+        transition: 0.3s;
+        opacity: 0;
+      }
+      
+      &__item_sub a:hover::before {
+        opacity: 1;
+        transform: translatex(0);
+      }
+      
+      &__item:target &__item_sub {
+        max-height: 10em;
+      }
+
+  }
+  
+
+ 
+/*------------------main-------------------------*/
+.main{
+    height: 89vh;
+}
+
+/*----------------main-risize------------------*/
+
+.main-resize{
+    height: 95vh;
+}

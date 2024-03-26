@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 // Диспетчеры: главная страница
 Route::get('/', function () {
-    return view('dispatchersmain');
+    return view('dispatchershome');
 });
-
+// Диспетчеры: заявка Водопровод
 Route::get('/tapwaterticket', function () {
-    return view('tapwaterticket')->name('tapwater-ticket');
-});
+    return view('tapwaterticket');
+})->name('tapwaterticket');
 
  

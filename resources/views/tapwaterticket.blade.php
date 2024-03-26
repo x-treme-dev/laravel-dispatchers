@@ -1,0 +1,2 @@
+@extends('ticket.collector')
+ 

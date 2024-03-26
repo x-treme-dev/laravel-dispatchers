@@ -1,5 +1,5 @@
  @include('dispatchers.header')
- @include('dispatchers.nav')
+ @include('dispatchers.top')
  @include('dispatchers.main')
  @yield('content')
- @include('dispatchers.footer')
+
