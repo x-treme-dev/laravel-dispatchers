@@ -1,22 +1,20 @@
-<form action="/" method="POST"  class="form">
+<form action="/" method="POST"  class="form" enctype="multipart/form-data">
     @csrf
-    <div class="form__wrapper">
         <div class="form__column-left">
             <h2 class="form__h2">Заявка по водопроводу</h2>
             <div class="form__item-left">
-                <p class="form__p">Дата регистрации</p>
+                <p class="form__p">Дата регистрации:</p>
                 <div class="form__time">
-                    <label for="" class="form__label">дата
-                        <input type="text" class="form__date">
+                    <label for="" class="form__label">дата:
+                        <input type="date" class="form__input-date">
                     </label>
-                    <label for="время" class="form__label">время
-                        <input type="text" class="form__hours"> :
-                        <input type="text" class="form__minutes">
+                    <label for="время" class="form__label">время:
+                        <input type="time" class="form__input-time"> 
                     </label>
                 </div>
             </div>
             <div class="form__item-left">
-                <p class="form__p">Описание события</p>
+                <p class="form__p">Описание события:</p>
                 <select name="" id="" class="form__select-event">
                     <option value="" class="form__option-event" selected disabled>Тип</option>
                     <option value="Открытый, поврежденный люк" class="form__option-event">Открытый, поврежденный люк</option>
@@ -33,9 +31,7 @@
                 </select>
             </div>
             <div class="form__item-left">
-              <textarea name="" id="" cols="30" rows="7" class="form__textarea" autocomplete="off">
-                Описание события...
-              </textarea>
+              <textarea name="" id="" cols="30" rows="7" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события..."></textarea>
              </div>
             <div class="form__item-left">
                  <div class="form__wrapper-left">
@@ -49,13 +45,16 @@
                         <input type="radio" class="form__radio" name="radio"> От абонента (письмо)
                     </label>
                  </div>
-                 <p class="form__p">Контакт заявителя</p>
-                 <input type="tel" class="form__input-phone" placeholder="8 777 777 77">
+                 <p class="form__p">Телефон :</p>
+                 <input type="tel" class="form__input-phone" placeholder=" +7 (XXX) XXX-XX-XX"  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" >
               </div>
             </div>
 
         <div class="form__column-right">
             <div class="form__item-right">
+                <a class="form__a" href="{{ route('dispatchershome') }}">
+                    <img src="{{ asset('css/assets/icon_close_red.png') }}" alt="icon-close" class="form__icon-close">
+                </a>
                 <p class="form__p">Адрес события: <a href="" class="form__a-red">показать на карте</a></p> 
                 <div class="form__address">
                      <input type="text" class="form__input-address" placeholder="Район">
@@ -69,12 +68,10 @@
                 </div>
             </div>
             <div class="form__item-right">
-                <textarea name="" id="" cols="30" rows="7" class="form__textarea" autocomplete="off">
-                  Примечание к месту события...
-                </textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Примечание к месту события..."></textarea>
             </div>
             <div class="form__item-right">
-                <p class="form__p">Описание события</p>
+                <p class="form__p">Закрепленный участок:</p>
                 <select name="" id="" class="form__select-event">
                     <option value="" class="form__option-event" selected disabled>Эксплуатационный участок</option>
                     <option value="Центральный" class="form__option-event">Центральный</option>
@@ -96,9 +93,12 @@
                     <option value="Обследование" class="form__option-event">Обследование</option>
                     <option value="Другое " class="form__option-event">Другое</option>
                 </select>
+                    <label for="fileUploader" class="form__label-upload">Загрузить фото
+                        <input id="fileUploader" class="form__input-upload" multiple type="file" name="image" accept="image/*"  />
+                    </label>
             </div>
-
+            <div class="form__button-wrapper">
+                <button class="form__button" type="submit"> Сохранить </button>
+            </div>
         </div>
-    </div>
-   
 </form>

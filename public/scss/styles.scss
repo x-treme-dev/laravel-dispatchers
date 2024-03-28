@@ -7,9 +7,38 @@
     column-gap: 20px;
 }
 
+@mixin form-flex{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
 @mixin link{
     text-decoration: none;
-    color: $link-color-white;
+}
+
+@mixin button{
+    background: $button-color-blue;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    font-size: $button-font-size;
+}
+
+@mixin input-date{
+    background-color: $color-grey;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: $offset-1;
+    outline: none;
+}
+
+@mixin calendar-picker{
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 *{
@@ -49,7 +78,7 @@ body{
     }
 
     &__h2{
-        color: #136295;
+        color: $login-color-blue;
     }
 
     &__p-white, &__p-blue{
@@ -68,6 +97,7 @@ body{
 
     &__a-exit{
         @include link;
+        color: $link-color-white;
     }
      
     &__exit{
@@ -76,19 +106,16 @@ body{
     }
 }
 
-/*---------------top-resize-----------------------*/
-
-.top-resize{
-    height: 5vh;
-    background-color: $bg-color-blue;
+/*------------------main-------------------------*/
+.main{
+    height: 89vh;
 }
 
 /*-----------------------main menu (dispatchers)------------------*/
- 
-  .menu__wrapper{
+.menu__wrapper{
     @include flex;
     justify-content: center;
-  }
+}
 
   .menu {
     width: 20rem;
@@ -167,15 +194,146 @@ body{
 
   }
   
+/*---------------top-resize-----------------------*/
 
- 
-/*------------------main-------------------------*/
-.main{
-    height: 89vh;
+.top-resize{
+    @include flex;
+    justify-content: flex-end;
+    height: 5vh;
+    background-color: $bg-color-blue;
+    padding-right: $offset-1;
+
+    &__icon-close{
+        display: block;
+    }
 }
 
-/*----------------main-risize------------------*/
 
+/*----------------main-risize------------------*/
 .main-resize{
     height: 95vh;
+}
+
+/*---------------------form (tapwaterticket)------------------------*/
+.form__wrapper{
+    padding-top: 2%;
+}
+
+.form{
+    @include form-flex;
+    background-color: $link-color-white;
+    justify-content: center;
+    width: 100%;
+    box-shadow: -15px 15px 0 0 $form-bg-shadow;
+
+    &__column-left{
+        width: $form-column-width;
+    }
+
+    &__h2{
+        color: $login-color-blue;
+        font-weight: 600;
+        padding-top: $offset-2;
+        font-size: $font-size-all + 0.1;
+    }
+
+    &__p{
+        padding-top: $offset-4;
+        padding-bottom: 1%;
+    }
+
+    &__input-date{
+        @include input-date;
+    }
+
+    &__input-date::-webkit-calendar-picker-indicator{
+       @include calendar-picker;
+    }
+
+    &__input-time{
+        @include input-date;
+        width: 140px;
+        height: 55px;
+    }
+
+    &__input-time::-webkit-calendar-picker-indicator{
+        @include calendar-picker;
+    }
+
+    &__select-event{
+        width: $input-width;
+        height: $input-height;
+        font-size: $input-font-size;
+        padding-left: $offset-1;
+        margin-bottom: $offset-1;
+    }
+
+     &__input-phone, &__input-address{
+        font-size: $input-font-size;
+    }
+
+    &__textarea{
+        font-size: $input-font-size;
+        width: $input-width;
+        display: block;
+        resize: vertical;
+    }
+
+    &__input-phone{
+        width: $input-width;
+        height: $input-height;
+    }
+
+    &__column-right{
+        width: $form-column-width; 
+    }
+
+    &__input-address{
+        width: $input-width;
+        height: $input-height;
+        padding-left: $offset-1;
+        margin-bottom: $offset-1;
+    }
+
+    &__button-wrapper{
+        @include flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    &__button{
+        @include button;
+        width: 100%;
+        height: $input-height;
+        margin-bottom: $offset-2;
+    } 
+
+    &__button:hover{
+        background-color: $form-bg-shadow;
+    }
+    
+    &__input-upload{
+        display: none;
+    }
+
+    &__label:nth-child(-n + 3) {
+        font-size: $input-font-size;
+    }
+
+   &__label-upload{
+      color: $color-rose;
+      cursor: pointer;
+   }
+
+   &__a-red{
+    @include link;
+    color: $color-rose;
+   }
+
+   &__icon-close{
+    display: block;
+    position: relative;
+    left: 95%;
+    cursor: pointer;
+   }
 }

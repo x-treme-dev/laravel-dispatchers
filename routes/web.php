@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 // Диспетчеры: главная страница
 Route::get('/', function () {
     return view('dispatchershome');
-});
+})->name('dispatchershome');
 // Диспетчеры: заявка Водопровод
 Route::get('/tapwaterticket', function () {
     return view('tapwaterticket');
