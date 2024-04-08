@@ -200,6 +200,7 @@ body{
     @include flex;
     justify-content: flex-end;
     height: 5vh;
+    min-height: 45px;
     background-color: $bg-color-blue;
     padding-right: $offset-1;
 
@@ -282,6 +283,7 @@ body{
     &__input-phone{
         width: $input-width;
         height: $input-height;
+        margin-bottom: $offset-2;
     }
 
     &__column-right{
@@ -292,6 +294,19 @@ body{
         width: $input-width;
         height: $input-height;
         padding-left: $offset-1;
+        margin-bottom: $offset-1;
+    }
+
+    &__map{
+        display: none;
+        border: 1px solid #000;
+        width: $input-width;
+        height: $input-height *4;
+        margin-bottom: $offset-1;
+    }
+
+    #coords{ 
+        display: none;
         margin-bottom: $offset-1;
     }
 

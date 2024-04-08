@@ -31,7 +31,7 @@
                 </select>
             </div>
             <div class="form__item-left">
-              <textarea name="" id="" cols="30" rows="7" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события..."></textarea>
+              <textarea name="" id="" cols="30" rows="6" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события..."></textarea>
              </div>
             <div class="form__item-left">
                  <div class="form__wrapper-left">
@@ -48,27 +48,25 @@
                  <p class="form__p">Телефон :</p>
                  <input type="tel" class="form__input-phone" placeholder=" +7 (XXX) XXX-XX-XX"  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" >
               </div>
-            </div>
+        </div>
 
         <div class="form__column-right">
             <div class="form__item-right">
                 <a class="form__a" href="{{ route('dispatchershome') }}">
                     <img src="{{ asset('css/assets/icon_close_red.png') }}" alt="icon-close" class="form__icon-close">
                 </a>
-                <p class="form__p">Адрес события: <a href="" class="form__a-red">показать на карте</a></p> 
-                <div class="form__address">
-                     <input type="text" class="form__input-address" placeholder="Район">
-                     <input type="text" class="form__input-address" placeholder="Город">
+                <p class="form__p">Адрес события <a href="" id="toggleMap" class="form__a-red">показать на карте</a></p> 
+                <div class="form__address js-form-address" id='addressFields'>
+                     <input type="text" class="form__input-address" name="district" placeholder="Район">
+                     <input type="text" class="form__input-address" name="city" placeholder="Город">
+                     <input type="text" class="form__input-address" name="street" placeholder="Улица">
+                     <input type="text" class="form__input-address" name="building" placeholder="Дом">
                 </div>
+                <div class="form__map" id="map"></div>
+                <textarea class="form__textarea" id="coords" rows="3" cols="33" resize-x="none"></textarea>
             </div>
             <div class="form__item-right">
-                <div class="form__address">
-                     <input type="text" class="form__input-address" placeholder="Улица">
-                     <input type="text" class="form__input-address" placeholder="Дом">
-                </div>
-            </div>
-            <div class="form__item-right">
-                <textarea name="" id="" cols="30" rows="7" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Примечание к месту события..."></textarea>
+                <textarea name="" id="" class="form__textarea" cols="30" rows="6" autocomplete="off" spellcheck="true" placeholder=" Примечание к месту события..."></textarea>
             </div>
             <div class="form__item-right">
                 <p class="form__p">Закрепленный участок:</p>
