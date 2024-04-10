@@ -1,13 +1,14 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-    let toggleMap = document.getElementById('toggleMap');
-    let addressFields = document.getElementById('addressFields');
-    let map = document.getElementById('map');
-    let coords = document.getElementById('coords');
+ document.addEventListener('DOMContentLoaded', () => {
     let toggle = true;
-   
+
+   /*oбработчик формы*/
     toggleMap.addEventListener('click', e => {
      e.preventDefault();
+     let toggleMap = document.getElementById('toggleMap');
+     let addressFields = document.getElementById('addressFields');
+     let map = document.getElementById('map');
+     let coords = document.getElementById('coords');
+
       if(toggle){
         addressFields.style.display='none';
         map.style.display='block';
@@ -23,8 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    let mobilePhoneInput = document.querySelector(".mobilephone");
+    const phoneMask = new IMask(mobilePhoneInput, {
+     mask: "+7(000)000-00-00",
+    });
 
-  });
+    
+     
+     let inputDate = document.querySelector('input[type="date"]');
+     inputDate.valueAsDate = new Date();
+     let inputTime = document.querySelector('input[type="time"]');
+     inputTime.value = new Date().toLocaleTimeString();
+});
     
     
   

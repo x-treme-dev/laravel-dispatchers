@@ -18,7 +18,7 @@
                 <select name="" id="" class="form__select-event">
                     <option value="" class="form__option-event" selected disabled>Тип</option>
                     <option value="Открытый, поврежденный люк" class="form__option-event">Открытый, поврежденный люк</option>
-                    <option value="Отсутствует (ограниченно) водоснабжение" class="form__option-event">Отсутствует (ограниченно) водоснабжение</option>
+                    <option value="Ограничено водоснабжение" class="form__option-event">Ограничено водоснабжение</option>
                     <option value="Утечка воды" class="form__option-event">Утечка воды</option>
                     <option value="Благоустройство" class="form__option-event">Благоустройство</option>
                     <option value="Согласование" class="form__option-event">Согласование</option>
@@ -31,7 +31,7 @@
                 </select>
             </div>
             <div class="form__item-left">
-              <textarea name="" id="" cols="30" rows="6" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события..."></textarea>
+              <textarea name="" id="" cols="30" rows="3" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события..."></textarea>
              </div>
             <div class="form__item-left">
                  <div class="form__wrapper-left">
@@ -45,8 +45,8 @@
                         <input type="radio" class="form__radio" name="radio"> От абонента (письмо)
                     </label>
                  </div>
-                 <p class="form__p">Телефон :</p>
-                 <input type="tel" class="form__input-phone" placeholder=" +7 (XXX) XXX-XX-XX"  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" >
+                 <p class="form__p">Контактный номер:</p>
+                 <input type="tel" class="form__input-phone mobilephone" placeholder="+7(000)000-00-00" minlength="18" maxlength="18" >
               </div>
         </div>
 
@@ -66,7 +66,7 @@
                 <textarea class="form__textarea" id="coords" rows="3" cols="33" resize-x="none"></textarea>
             </div>
             <div class="form__item-right">
-                <textarea name="" id="" class="form__textarea" cols="30" rows="6" autocomplete="off" spellcheck="true" placeholder=" Примечание к месту события..."></textarea>
+                <textarea name="" id="" class="form__textarea" cols="30" rows="3" autocomplete="off" spellcheck="true" placeholder=" Примечание к месту события..."></textarea>
             </div>
             <div class="form__item-right">
                 <p class="form__p">Закрепленный участок:</p>
@@ -91,9 +91,7 @@
                     <option value="Обследование" class="form__option-event">Обследование</option>
                     <option value="Другое " class="form__option-event">Другое</option>
                 </select>
-                    <label for="fileUploader" class="form__label-upload">Загрузить фото
-                        <input id="fileUploader" class="form__input-upload" multiple type="file" name="image" accept="image/*"  />
-                    </label>
+                   <input class="form__input-upload" multiple type="file" name="image" accept="image/*"  />
             </div>
             <div class="form__button-wrapper">
                 <button class="form__button" type="submit"> Сохранить </button>
