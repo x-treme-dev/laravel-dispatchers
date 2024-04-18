@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -320,11 +321,11 @@ body {
   padding-left: 1%;
   margin-bottom: 1%;
 }
-.form__input-phone, .form__input-address {
+.form__input-phone, .form__input-address, .form__input-area {
   font-size: 0.8em;
 }
 .form__textarea {
-  font-size: 0.8em;
+  font-size: 1.12em;
   width: 100%;
   display: block;
   resize: vertical;
@@ -337,7 +338,7 @@ body {
 .form__column-right {
   width: 48%;
 }
-.form__input-address {
+.form__input-address, .form__input-area {
   width: 100%;
   height: 40px;
   padding-left: 1%;
@@ -383,6 +384,7 @@ body {
 }
 .form__button:hover {
   background-color: #FF4D0F;
+  cursor: pointer;
 }
 .form__input-upload {
   width: 100%;
@@ -430,6 +432,69 @@ body {
   left: 95%;
   cursor: pointer;
 }
+.form__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.form__div-popup {
+  width: 30vw;
+  min-width: 300px;
+  min-height: 270px;
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  background-color: #39A1E6;
+  color: #fff;
+  position: relative;
+  top: 40%;
+}
+.form__h3-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+.form__ul-popup {
+  text-decoration: none;
+  text-align: left;
+  padding: 15px;
+}
+.form__li-popup::before {
+  content: "►"; /* Добавляем маркер в шестнадцатеричном формате*/
+  padding-right: 5px; /* Расстояние от маркеров до текста */
+  color: #FF4D0F;
+}
+.form__a-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.form__icon-close-popup {
+  display: block;
+  position: relative;
+  top: -15px;
+  left: 95%;
+  cursor: pointer;
+}
 
 @media (min-width: 768px) and (max-width: 1000px) {
   .form {
@@ -451,6 +516,26 @@ body {
   }
   .form__h2 {
     color: #136295;
+    font-weight: 600;
+    padding-top: 2%;
+    font-size: 1.1em;
+  }
+  .form__h3-popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #fff;
     font-weight: 600;
     padding-top: 2%;
     font-size: 1.1em;

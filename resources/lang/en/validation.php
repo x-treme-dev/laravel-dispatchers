@@ -107,7 +107,8 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+   // 'required' => 'The :attribute field is required.',
+    'required' => ':attribute',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
@@ -140,6 +141,12 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
+    /*
+    'custom' => [
+        'attribute-name' => [
+            'rule-name' => 'custom-message',
+        ],
+    ],*/
 
     'custom' => [
         'attribute-name' => [
@@ -157,7 +164,18 @@ return [
     | of "email". This simply helps us make our message more expressive.
     |
     */
-
+    /*
     'attributes' => [],
+    */
+
+    'attributes' => [
+        'date' => 'Дата',
+        'time' => 'Время',
+        'type' => 'Тип',
+        'description' => 'Описание события',
+        'city' => 'Город',
+        'street' => 'Улица',
+        'building' => 'Номер дома'
+    ],
 
 ];

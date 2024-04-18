@@ -285,12 +285,12 @@ body{
         margin-bottom: $offset-1;
     }
 
-     &__input-phone, &__input-address{
+     &__input-phone, &__input-address, &__input-area{
         font-size: $input-font-size;
     }
 
     &__textarea{
-        font-size: $input-font-size;
+        font-size: $input-font-size *1.4;
         width: $input-width;
         display: block;
         resize: vertical;
@@ -306,7 +306,7 @@ body{
         width: $form-column-width; 
     }
 
-    &__input-address{
+    &__input-address, &__input-area{
         width: $input-width;
         height: $input-height;
         padding-left: $offset-1;
@@ -341,6 +341,7 @@ body{
 
     &__button:hover{
         background-color: $form-bg-shadow;
+        cursor: pointer;
     }
     
     &__input-upload{
@@ -382,6 +383,65 @@ body{
         left: 95%;
         cursor: pointer;
     }
+
+    &__popup{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    } 
+
+    &__div-popup{
+        width: 30vw;
+        min-width: 300px;
+        min-height: 270px;
+        text-align: center;
+        padding: 15px;
+        margin: auto;
+        background-color: $button-color-blue;
+        color: #fff;
+        position: relative;
+        top: 40%;
+    }
+
+    &__h3-popup{
+        @include flex;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: $font-size-all - 0.1;
+    }
+
+    &__ul-popup{
+        text-decoration: none;
+        text-align: left;
+        padding: 15px;
+    }
+
+    &__li-popup::before {
+        content: '\25ba'; /* Добавляем маркер в шестнадцатеричном формате*/
+        padding-right: 5px; /* Расстояние от маркеров до текста */
+        color: $form-bg-shadow;  
+    }
+
+    &__a-popup{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    &__icon-close-popup{
+        display: block;
+        position: relative;
+        top: -15px;
+        left: 95%;
+        cursor: pointer;
+    }
+
 }
 
 @media (min-width:768px) and (max-width:1000px){
@@ -411,6 +471,15 @@ body{
 
         &__h2{
             color: $login-color-blue;
+            font-weight: 600;
+            padding-top: $offset-2;
+            font-size: $font-size-all - 0.4;
+        }
+
+        &__h3-popup{
+            @include flex;
+            justify-content: center;
+            color: #fff;
             font-weight: 600;
             padding-top: $offset-2;
             font-size: $font-size-all - 0.4;

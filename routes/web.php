@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TapWaterTicketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dispatchershome');
 })->name('dispatchershome');
+
 // Диспетчеры: заявка Водопровод
 Route::get('/tapwaterticket', function () {
     return view('tapwaterticket');
 })->name('tapwaterticket');
+
+// Отправка формы - заявка Диспетчеров
+Route::post('/message', [TapWaterTicketController::class, 'store']);
 
  
