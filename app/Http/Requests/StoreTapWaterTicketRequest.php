@@ -31,14 +31,14 @@ class StoreTapWaterTicketRequest extends FormRequest
             'radio' => 'nullable',
             'phone' => 'nullable',
             'district' => 'nullable',
-            'city' => 'required',
-            'street' => 'required',
-            'building' => 'required',
-            'addressmap' => 'nullable',
+            'city' => 'required_without:addressmap',
+            'street' => 'required_without:addressmap',
+            'building' => 'required_without:addressmap',
+            'addressmap' => 'required_without:city,street,building',
             'notes' => 'nullable',
             'cityarea' => 'nullable',
             'works' => 'nullable',
-            'image' => 'nullable',
+            'image' => 'nullable|mimes:jpeg,png,jpg',
         ];
     }
 }

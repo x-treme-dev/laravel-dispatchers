@@ -114,7 +114,8 @@ return [
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
     'required_with_all' => 'The :attribute field is required when :values are present.',
-    'required_without' => 'The :attribute field is required when :values is not present.',
+   // 'required_without' => 'The :attribute field is required when :values is not present.',
+    'required_without' => ':attribute (если не выбраны :values)',
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
     'same' => 'The :attribute and :other must match.',
     'size' => [
@@ -175,7 +176,8 @@ return [
         'description' => 'Описание события',
         'city' => 'Город',
         'street' => 'Улица',
-        'building' => 'Номер дома'
+        'building' => 'Номер дома',
+        'addressmap' => 'Яндекс Карты'
     ],
 
 ];

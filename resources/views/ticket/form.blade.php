@@ -16,7 +16,7 @@
             <div class="form__item-left">
                 <p class="form__p">Cобытие:</p>
                 <select name="type" class="form__select-event">
-                    <option value="" class="form__option-event" selected disabled>Тип</option>
+                    <option value="" class="form__option-event" selected disabled>Тип *</option>
                     <option value="Открытый, поврежденный люк" class="form__option-event">Открытый, поврежденный люк</option>
                     <option value="Ограничено водоснабжение" class="form__option-event">Ограничено водоснабжение</option>
                     <option value="Утечка воды" class="form__option-event">Утечка воды</option>
@@ -31,7 +31,7 @@
                 </select>
             </div>
             <div class="form__item-left">
-              <textarea name="description" cols="30" rows="3" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события..."></textarea>
+              <textarea name="description" cols="30" rows="3" class="form__textarea" autocomplete="off" spellcheck="true" placeholder=" Описание события *"></textarea>
              </div>
             <div class="form__item-left">
                  <div class="form__wrapper-left">
@@ -55,12 +55,12 @@
                 <a class="form__a" href="{{ route('dispatchershome') }}">
                     <img src="{{ asset('css/assets/icon_close_red.png') }}" alt="icon-close" class="form__icon-close">
                 </a>
-                <p class="form__p">Адрес события <a href="#" id="toggleMap" class="form__a-red">показать на карте</a></p> 
+                <p class="form__p">Адрес события: <a href="#" id="toggleMap" class="form__a-red">Яндекс Карты *</a></p> 
                 <div class="form__address js-form-address" id='addressFields'>
                      <input type="text" class="form__input-address" name="district" placeholder="Район">
-                     <input type="text" class="form__input-address" name="city" placeholder="Город">
-                     <input type="text" class="form__input-address" name="street" placeholder="Улица">
-                     <input type="text" class="form__input-address" name="building" placeholder="Дом">
+                     <input type="text" class="form__input-address" name="city" placeholder="Город *">
+                     <input type="text" class="form__input-address" name="street" placeholder="Улица *">
+                     <input type="text" class="form__input-address" name="building" placeholder="Дом *">
                 </div>
                 <div class="form__map" id="map"></div>
                 <textarea name="addressmap" class="form__textarea" id="coords" rows="3" cols="33" resize-x="none"></textarea>
@@ -87,7 +87,7 @@
                     <option value="Обследование" class="form__option-event">Обследование</option>
                     <option value="Другое" class="form__option-event">Другое</option>
                 </select>
-                   <input name="image" class="form__input-upload" multiple type="file"  accept="image/*"  />
+                   <input name="image" class="form__input-upload" multiple type="file" accept="image/*, .png, .jpg, .jpeg" />
             </div>
             <div class="form__button-wrapper">
                 <button class="form__button" type="submit"> Сохранить </button>
@@ -102,7 +102,7 @@
                     <a class="form__a" href="{{ route('tapwaterticket') }}">
                         <img src="{{ asset('css/assets/icon_close_red.png') }}" alt="icon-close" class="form__icon-close-popup">
                     </a>
-                    <h3 class="form__h3-popup">Поля обязательные для заполнения:</h3>
+                    <h3 class="form__h3-popup">Необходимо заполнить поля:</h3>
                     <ul class = "form__ul-popup">
                         @foreach($errors->all() as $error)
                         <li class = "form__li-popup">{{ $error }}</li>  

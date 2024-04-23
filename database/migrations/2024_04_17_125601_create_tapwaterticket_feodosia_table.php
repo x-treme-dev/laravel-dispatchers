@@ -18,18 +18,18 @@ class CreateTapwaterticketFeodosiaTable extends Migration
             $table->string('date');
             $table->string('time');
             $table->string('type');
-            $table->text('description');
-            $table->integer('radio');
-            $table->string('phone');
-            $table->string('district');
-            $table->string('city');
-            $table->string('street');
-            $table->string('building');
-            $table->string('addressmap');
-            $table->text('notes');
-            $table->string('cityarea');
-            $table->string('works');
-            $table->string('image');
+            $table->string('description');
+            $table->integer('radio')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('district')->nullable();
+            $table->string('city')->nullable();
+            $table->string('street')->nullable();
+            $table->string('building')->nullable();
+            $table->string('addressmap')->nullable();
+            $table->string('notes')->nullable();
+            $table->string('cityarea')->nullable();
+            $table->string('works')->nullable();
+            $table->string('image')->nullable();
         });
     }
 

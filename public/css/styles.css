@@ -325,7 +325,7 @@ body {
   font-size: 0.8em;
 }
 .form__textarea {
-  font-size: 1.12em;
+  font-size: 0.8em;
   width: 100%;
   display: block;
   resize: vertical;
@@ -449,7 +449,7 @@ body {
   background-color: #39A1E6;
   color: #fff;
   position: relative;
-  top: 40%;
+  top: 20%;
 }
 .form__h3-popup {
   display: -webkit-box;
@@ -539,5 +539,8 @@ body {
     font-weight: 600;
     padding-top: 2%;
     font-size: 1.1em;
+  }
+  .form__textarea {
+    font-size: 0.8em;
   }
 }
