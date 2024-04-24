@@ -271,6 +271,22 @@ body {
   padding-top: 4%;
   padding-bottom: 1%;
 }
+.form__p-note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  font-size: 0.7em;
+  padding-top: 2%;
+  color: #FF8373;
+}
 .form__time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,5 +558,52 @@ body {
   }
   .form__textarea {
     font-size: 0.8em;
+  }
+}
+.innermessage {
+  margin-top: 30%;
+}
+.innermessage__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #39A1E6;
+  padding: 35px;
+}
+.innermessage__h2 {
+  color: #136295;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #fff;
+}
+.innermessage__a {
+  color: #136295;
+}
+.innermessage__icon-close {
+  display: block;
+  position: relative;
+  top: 23px;
+  left: 95%;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .innermessage__h2 {
+    font-size: 1.1em;
+  }
+  .innermessage__icon-close {
+    left: 89%;
   }
 }

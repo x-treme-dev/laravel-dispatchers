@@ -48,6 +48,7 @@
                  <p class="form__p">Контактный номер:</p>
                  <input name="phone" type="tel" class="form__input-phone mobilephone" placeholder="+7(000)000-00-00" minlength="18" maxlength="18" >
               </div>
+              <p class="form__p-note">* - поля обязательные к заполнению</p>
         </div>
 
         <div class="form__column-right">
