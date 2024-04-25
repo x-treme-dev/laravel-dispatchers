@@ -32,11 +32,10 @@ class TapWaterTicketController extends Controller
             $image = $request -> file('image');
             $path = $image -> store('upload', 'public');
             $tapwaterticket -> image = $path;
-            dump($path);
         }
 
-       //$tapwaterticket -> save();
-       // to get last ticket
+        $tapwaterticket -> save();
+       // to get last ticket (last row of table)
         $last_ticket = DB::table('tapwaterticket_feodosia')->orderBy('tapwaterticket_id', 'DESC')->first();
         return view('/message')->with('last_ticket', $last_ticket);
     }
