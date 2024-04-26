@@ -14,7 +14,7 @@ class MessagePageTest extends TestCase
      * @return void
      */
     public function testMessagePageStatus()
-    {
+    {   // на страницу /message отправляется post-запрос из формы tapwaterticket
         $response = $this->post('/message');
         // 302 - статус временного перенаправления
         // получили сообщение о незаполненных полях формы 

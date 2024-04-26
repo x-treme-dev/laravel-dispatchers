@@ -9,8 +9,6 @@ class TapWaterTicketFeodosia extends Model
 {
     //use HasFactory;
     //содинить модель с таблицей, передать данные в TapWaterTicketController.php
-    public $timestamps = false;
+    public $timestamps = true;
     protected $table = 'tapwaterticket_feodosia';
-    
-     
 }
