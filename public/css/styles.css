@@ -550,8 +550,9 @@ body {
 .table {
   width: 100%;
   text-align: center;
-  position: relative;
+  border-collapse: collapse;
   border: 1px solid #fff;
+  position: relative;
 }
 .table__caption {
   text-align: left;
@@ -571,7 +572,7 @@ body {
 .table .data_row {
   text-align: left;
   color: #FF8373;
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-weight: 600;
 }
 .table__data {
@@ -583,11 +584,9 @@ body {
 }
 .table__row {
   background-color: #D6EAF8;
-  height: 70px;
-  max-height: 90px;
 }
 .table__row:hover {
-  background-color: #5DADE2;
+  background-color: #85C1E9;
 }
 .table__row:first-child {
   height: 40px;
@@ -596,5 +595,78 @@ body {
   background-color: #8ECBF3;
 }
 .table__row:nth-child(even):hover {
-  background-color: #5DADE2;
+  background-color: #85C1E9;
+}
+.table__a:hover {
+  cursor: pointer;
+}
+.table__img-done {
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .table .data_row {
+    font-size: 0.9230769231em;
+  }
+  .table__caption {
+    font-size: 1.1538461538em;
+  }
+  .table__thead {
+    display: none;
+  }
+  .table__row {
+    display: block;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+  }
+  .table__data {
+    display: block;
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px solid transparent;
+    font-size: 0.75em;
+    text-align: right;
+    padding-bottom: 20px;
+  }
+  .table__data:last-child {
+    border-bottom: 0;
+  }
+  .table__data::before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .table .data_row {
+    font-size: 0.9230769231em;
+  }
+  .table__caption {
+    font-size: 1.1538461538em;
+  }
+  .table__thead {
+    display: none;
+  }
+  .table__row {
+    display: block;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+  }
+  .table__data {
+    display: block;
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px solid transparent;
+    font-size: 0.6em;
+    text-align: right;
+    padding-bottom: 20px;
+  }
+  .table__data:last-child {
+    border-bottom: 0;
+  }
+  .table__data::before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
