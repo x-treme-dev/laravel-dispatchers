@@ -547,3 +547,54 @@ body {
     left: 89%;
   }
 }
+.table {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border: 1px solid #fff;
+}
+.table__caption {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #136295;
+}
+.table__header {
+  background-color: #39A1E6;
+  color: #FFF;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+}
+.table .data_row {
+  text-align: left;
+  color: #FF8373;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.table__data {
+  border: 1px solid #fff;
+  font-size: 0.75em;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+}
+.table__row {
+  background-color: #D6EAF8;
+  height: 70px;
+  max-height: 90px;
+}
+.table__row:hover {
+  background-color: #5DADE2;
+}
+.table__row:first-child {
+  height: 40px;
+}
+.table__row:nth-child(even) {
+  background-color: #8ECBF3;
+}
+.table__row:nth-child(even):hover {
+  background-color: #5DADE2;
+}

@@ -167,7 +167,7 @@ body{
       }
       
       &__item_sub {
-        background: #D6EAF8;
+        background: $menu-item-bg;
         overflow: hidden;
         transition: max-height 0.3s;
         max-height: 0;
@@ -486,4 +486,67 @@ body{
             left: 89%;
         }
     }
+}
+
+// журнал заявок
+.table{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border: 1px solid $link-color-white;
+
+    &__caption{
+        text-align: left;
+        font-size: $font-size-all;
+        font-weight: $font-bold;
+        color: $login-color-blue;
+    }
+    
+    &__header{
+        background-color: $button-color-blue;
+        color:#FFF;
+        position: sticky;
+        top:0;
+        z-index: 1;
+        padding: 10px 20px;
+        border: 1px solid #fff;
+    }
+
+    .data_row{
+        text-align: left;
+        color:$color-rose;
+        font-size: $button-font-size;
+        font-weight: $font-bold;
+    }
+
+    &__data{
+        border: 1px solid #fff;
+        font-size: calc($font-size-all / 2);
+        vertical-align: middle;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    &__row{
+        background-color: $menu-item-bg;
+        height: $table-height-row;
+        max-height: $table-height-row + 20px;
+    }
+
+    &__row:hover{
+        background-color: $table-hover-color;
+    }
+
+    &__row:first-child{
+        height: $table-height-row - 30px;
+    }
+
+    &__row:nth-child(even){
+        background-color: $bg-color-blue;
+    }
+
+    &__row:nth-child(even):hover{
+        background-color: $table-hover-color;
+    }
+
 }

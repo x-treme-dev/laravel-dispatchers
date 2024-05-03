@@ -9,7 +9,7 @@ use App\Models\TapWaterTicketFeodosia;
 
 class TapWaterTicketController extends Controller
 {
-    //send data from FORM to tapwaterticket table 
+    // получение данных из формы и запись в таблицу
     public function store(StoreTapWaterTicketRequest $request){
       
         $tapwaterticket = new TapWaterTicketFeodosia();

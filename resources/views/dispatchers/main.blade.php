@@ -19,7 +19,7 @@
                 Журналы
               </a>
               <div class="menu__item_sub">
-                <a class="menu__a" href="#">Водопровод</a>
+                <a class="menu__a" href="{{ route('tabletickets') }}">Водопровод</a>
                 <a class="menu__a" href="#">Канализация</a>
               </div>
             </li>

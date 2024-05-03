@@ -28,8 +28,10 @@ class MessagePageTest extends TestCase
         $response->assertStatus(200);
      } 
 
-     /*public function testOutDataFromControllerToMessagePage()
+     public function testClickLinkRedirectToTableTicketsPage()
      {
-        
-     }*/
+         $response = $this->from('/message')->get('/tabletickets');
+ 
+         $response->assertStatus(200);
+      } 
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TapWaterTicketController;
+use App\Http\Controllers\TableTicketsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,5 @@ Route::get('/tapwaterticket', function () {
 // Отправка формы - заявка Диспетчеров
 Route::post('/message', [TapWaterTicketController::class, 'store']);
 
- 
+// Вывод таблиц c заявками
+Route::get('/tabletickets', [TableTicketsController::class, 'getTickets'])->name('tabletickets');

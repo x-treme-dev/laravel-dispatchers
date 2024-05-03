@@ -4,6 +4,8 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
@@ -16,7 +18,7 @@ class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
     public function testSendDataFromFormToTapWaterTicketController()
     {  
         // тестовые данные для проверки отправки через форму (заявка Водопровод)
-        $response = $this->json('POST', '/message', [
+        $response = $this->post( '/message', [
             'date' => '25.04.2024',
             'time' => '11:58:00',
             'type' => 'Замена труб',
@@ -34,6 +36,9 @@ class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200);
+        // проверим, что данные записаны в таблицу
+        $this->assertDatabaseHas('tapwaterticket_feodosia', ['date' => '25.04.2024']);
         //идентично $response->assertOk();
     }
+
 }
