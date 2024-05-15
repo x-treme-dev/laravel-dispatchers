@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
-{
+{   
+    // чистим тестовую базу данных после каждого теста
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *

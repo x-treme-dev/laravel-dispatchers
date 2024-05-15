@@ -17,6 +17,7 @@ class CreateTapwaterticketFeodosiaTable extends Migration
             $table->id('tapwaterticket_id');
             $table->string('date');
             $table->string('time');
+            $table->string('service')->default('Водопровод');
             $table->string('type');
             $table->string('description');
             $table->integer('radio')->nullable();

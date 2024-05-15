@@ -1,6 +1,8 @@
  document.addEventListener('DOMContentLoaded', () => {
     let toggle = true;
 
+    
+
    /*oбработчик формы*/
     toggleMap.addEventListener('click', e => {
      e.preventDefault();
@@ -35,6 +37,15 @@
      inputDate.valueAsDate = new Date();
      let inputTime = document.querySelector('input[type="time"]');
      inputTime.value = new Date().toLocaleTimeString();
+    
+     // запрет отправки формы по нажатию клавиши Enter
+     document.querySelector('form').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        // Стоп, отправка прерывается!
+        event.preventDefault();
+      }
+    });
+    
 });
     
     

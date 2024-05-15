@@ -19,4 +19,20 @@ class TablePageTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+     //тестирование ссылок, перенаправления
+     public function testClickLinkRedirectToDispathersHomePage()
+     {
+        $response = $this->from('/tabletickets')->get('/');
+
+        $response->assertStatus(200);
+     }
+
+     //тестирование данных, выводимых в таблицу
+     public function testOutputDataFromTableTicketsControllerToTicketsPage(){
+        $response = $this->get('/tabletickets');
+        // получили объект tickets на странице /tabletickets
+        $response->assertViewHas('tickets');
+     }
+     
 }

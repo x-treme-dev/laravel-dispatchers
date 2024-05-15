@@ -21,7 +21,6 @@
     background: $button-color-blue;
     color:#fff;
     border:none;
-    cursor: pointer;
     font-size: $button-font-size;
 }
 
@@ -37,7 +36,6 @@
 @mixin calendar-picker{
     background-color: #fff;
     padding: 5px;
-    cursor: pointer;
     border-radius: 3px;
 }
 
@@ -348,7 +346,6 @@ body{
 
     &__button:hover{
         background-color: $form-bg-shadow;
-        cursor: pointer;
     }
     
     &__input-upload{
@@ -361,7 +358,6 @@ body{
         background: $button-color-blue;
         padding: 10px 20px;
         color:#FFF;
-        cursor: pointer;
         transition: background .2s ease-in-out;
     }
      
@@ -376,7 +372,6 @@ body{
 
     &__label-upload{
         color: $color-rose;
-        cursor: pointer;
     }
 
     &__a-red{
@@ -388,7 +383,6 @@ body{
         display: block;
         position: relative;
         left: 95%;
-        cursor: pointer;
     }
 
     &__div-message{
@@ -472,7 +466,6 @@ body{
         position: relative;
         top: 23px;
         left: 95%;
-        cursor: pointer;
     }
 }
 
@@ -506,6 +499,7 @@ body{
     &__header{
         background-color: $button-color-blue;
         color:#FFF;
+        font-size: calc($font-size-all / 2);
         position: sticky;
         top:0;
         z-index: 1;
@@ -516,15 +510,16 @@ body{
     .data_row{
         text-align: left;
         color:$color-rose;
-        font-size: $table-date-font-size;
+        font-size: $table-date-font-size ;
         font-weight: $font-bold;
     }
 
     &__data{
         border: 1px solid #fff;
-        font-size: calc($font-size-all / 2);
+        font-size: calc($font-size-all / 2.4);
         vertical-align: middle;
         text-align: center;
+        min-height: 30px;
         padding: 10px;
     }
     
@@ -534,10 +529,6 @@ body{
 
     &__row:hover{
         background-color: $table-hover-color;
-    }
-
-    &__row:first-child{
-        height: $table-height-row - 30px;
     }
 
     &__row:nth-child(even){
@@ -585,7 +576,7 @@ body{
             border-right: 1px solid transparent;
             font-size: calc($font-size-all /2);
             text-align: right;
-            padding-bottom: 20px;
+             
         }
 
         &__data:last-child{
@@ -629,7 +620,7 @@ body{
             border-right: 1px solid transparent;
             font-size: calc($font-size-all /2.5);
             text-align: right;
-            padding-bottom: 20px;
+             
         }
     
         &__data:last-child{
