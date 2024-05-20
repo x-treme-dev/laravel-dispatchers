@@ -561,6 +561,10 @@ body {
   padding: 10px 20px;
   border: 1px solid #fff;
 }
+.table .row_sticky {
+  position: sticky;
+  top: 70px;
+}
 .table .data_row {
   text-align: left;
   color: #FF8373;
@@ -595,6 +599,10 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1400px) {
+  .table .row_sticky {
+    position: sticky;
+    top: 0px;
+  }
   .table .data_row {
     font-size: 0.9230769231em;
   }
@@ -627,6 +635,10 @@ body {
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  .table .row_sticky {
+    position: sticky;
+    top: 0px;
+  }
   .table .data_row {
     font-size: 0.9230769231em;
   }
@@ -645,7 +657,7 @@ body {
     display: block;
     border-bottom: 1px dotted #ccc;
     border-right: 1px solid transparent;
-    font-size: 0.6em;
+    font-size: 0.5em;
     text-align: right;
   }
   .table__data:last-child {

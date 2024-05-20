@@ -6,24 +6,17 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class DispatchersHomePageTest extends TestCase
+class RedirectDispatchersHomePageToTableticketPageTest extends TestCase
 {
     /**
      * A basic feature test example.
      *
      * @return void
      */
-    public function testDispatchersHomePageStatus()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-    
      //тестирование ссылок, перенаправления
-     public function testClickLinkRedirectToTapWaterTicketPage()
+     public function test_redirect_to_table_tickets_page()
      {
-        $response = $this->from('/')->get('tapwaterticket');
+        $response = $this->from('/')->get('tabletickets');
 
         $response->assertStatus(200);
      }

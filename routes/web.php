@@ -29,7 +29,12 @@ Route::get('/tapwaterticket', function () {
     return view('tapwaterticket');
 })->name('tapwaterticket');
 
-// Отправка формы - заявка Диспетчеров
+// Диспетчеры: редактирование заявки Водопровод
+Route::get('/ticketedit', function () {
+    return view('ticketedit');
+})->name('ticketedit');
+
+// Отправка формы (заявка Диспетчеров) и вывод сообщения о создании новой заявки
 Route::post('/message', [TapWaterTicketController::class, 'store']);
 
 // Вывод таблиц c заявками
