@@ -2,34 +2,36 @@
 
 namespace Tests\Feature;
 
+use App\Models\TapWaterTicketFeodosia;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Http\Client\Request;
  
 
 class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
-{   
-   
+{ 
+  // чистит тестовую таблицу  
+  use RefreshDatabase;
     /**
      * A basic feature test example.
      *
      * @return void
      */
+   
+     /**@test**/
     public function test_send_data_via_form_tapwaterticket_to_message_page()
     {  
-        // тестовые данные для проверки отправки через форму (заявка Водопровод)
-       Http::fake();
-       
-       Http::post('/message', [
-        'date'=>'20.05.24',
+
+     // вывод исключений в тестах
+      $this->withoutExceptionHandling();
+        // тестовые данные для проверки отправки через форму (заявка Водопровод) без проверки csrf-токена
+      
+      $response = $this->post('/message', [
+        'date'=>'21.05.2024',
         'time'=>'14:20:20',
-        'type'=>'Test',
+        'type'=>'Утечка воды',
         'description' => 'test',
-        'radio' => '2',
+        'radio' => 2,
         'phone' => '+79789999999',
         'district' => 'Крым',
         'city' => 'Симферополь',
@@ -39,12 +41,14 @@ class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
         'notes' => 'test',
         'cityarea' => 'Центр',
         'works' => 'test',
-        'image' => '2asd3las4asdf20.png',
+        //тестирование загрузки файла
+        'file' => $file = UploadedFile::fake()->image('random.jpg'),
      ]);
-
-     Http::assertSentCount(1);
-     
-         
+    
+    
+     $response -> assertOk();
+     //указаны количестов запросов и Модель
+     $this->assertCount(1, TapWaterTicketFeodosia::all());
     }
 
 }
