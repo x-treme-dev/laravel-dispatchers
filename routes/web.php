@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TapWaterTicketController;
 use App\Http\Controllers\TableTicketsController;
+use App\Http\Controllers\TicketEditController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,13 +27,12 @@ Route::get('/', function () {
 
 // Диспетчеры: заявка Водопровод
 Route::get('/tapwaterticket', function () {
-    return view('tapwaterticket');
+    $service = "водопроводу";
+    return view('tapwaterticket', compact('service'));
 })->name('tapwaterticket');
 
-// Диспетчеры: редактирование заявки Водопровод
-Route::get('/ticketedit', function () {
-    return view('ticketedit');
-})->name('ticketedit');
+// Диспетчеры: редактирование заявки Водопровод, передача id заявки
+Route::get('/ticketedit/{ticket_id}', [TicketEditController::class, 'getTicketId'])->name('ticketedit');
 
 // Отправка формы (заявка Диспетчеров) и вывод сообщения о создании новой заявки
 Route::post('/message', [TapWaterTicketController::class, 'store']);

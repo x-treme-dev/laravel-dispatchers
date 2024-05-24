@@ -33,9 +33,9 @@
 
     
      
-     let inputDate = document.querySelector('input[type="date"]');
+     let inputDate = document.getElementById('date');
      inputDate.valueAsDate = new Date();
-     let inputTime = document.querySelector('input[type="time"]');
+     let inputTime = document.getElementById('time');
      inputTime.value = new Date().toLocaleTimeString();
     
      // запрет отправки формы по нажатию клавиши Enter

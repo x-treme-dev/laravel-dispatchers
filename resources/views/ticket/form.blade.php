@@ -1,16 +1,16 @@
 <form action="/message" method="POST"  class="form" enctype="multipart/form-data">
     @csrf
         <div class="form__column-left">
-            <h2 class="form__h2">Заявка по водопроводу</h2>
+            <h2 class="form__h2">Заявка по {{ $service }}</h2>
             <div class="form__item-left">
                 <p class="form__p">Дата регистрации:</p>
                 <div class="form__time">
                     <label for="date" class="form__label">дата:
                         <!--Добавлено сообщение об ошибке на случай, если дата и время не будет установлено. Для даты и времени доступен ручной ввод.-->
-                        <input name="date" type="date" class="form__input-date" class="@error('date') is-invalid @enderror">
+                        <input name="date" type="date" id="date" class="form__input-date" class="@error('date') is-invalid @enderror">
                     </label>
                     <label for="time" class="form__label">время:
-                        <input name="time" type="time" step="any" class="form__input-time" class="@error('time') is-invalid @enderror"> 
+                        <input name="time" type="time" id="time" step="any" class="form__input-time" class="@error('time') is-invalid @enderror"> 
                     </label>
                     @error('date') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
                     @error('time') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror

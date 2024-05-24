@@ -36,7 +36,8 @@
                 <td class="table__data" data-label="Время начала работ"></td>
                 <td class="table__data" data-label="Время окончания работ"></td>
                 <td class="table__data" data-label="Опции">
-                    <a class="table__a" href="{{ route('ticketedit') }}">
+                    @php $ticket_id = $rowTickets->tapwaterticket_id @endphp
+                    <a class="table__a" href="{{ route('ticketedit', ['ticket_id' => $rowTickets->tapwaterticket_id]) }}">
                         <img src="{{ asset('css/assets/button-edit-orange.png') }}" title="редактировать заявку №{{ $rowTickets->tapwaterticket_id  }}" class="table__img-edit">
                     </a>
                     <a class="table__a" src="#">
