@@ -65,8 +65,7 @@
                      @error('city') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
                      <input type="text" class="form__input-address"  class="@error('street') is-invalid @enderror" name="street" placeholder="Улица *">
                      @error('street') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
-                     <input type="text" class="form__input-address" class="@error('building') is-invalid @enderror" name="building" placeholder="Дом ">
-                     @error('building') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
+                     <input type="text" class="form__input-address" placeholder="Дом">
                 </div>
                 <div class="form__map" id="map"></div>
                 <textarea name="addressmap" class="form__textarea"  class="@error('addressmap') is-invalid @enderror" id="coords" rows="3" cols="33" resize-x="none"></textarea>

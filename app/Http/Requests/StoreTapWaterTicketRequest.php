@@ -34,7 +34,7 @@ class StoreTapWaterTicketRequest extends FormRequest
             'city' => 'required_without:addressmap',
             'street' => 'required_without:addressmap',
             'building' => 'nullable',
-            'addressmap' => 'required_without:city,street,building',
+            'addressmap' => 'required_without:city,street',
             'notes' => 'nullable',
             'cityarea' => 'nullable',
             'image' => 'nullable|mimes:jpeg,png,jpg',
