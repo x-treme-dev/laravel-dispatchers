@@ -25,12 +25,9 @@
                     <option value="Утечка воды" class="form__option-event">Утечка воды</option>
                     <option value="Благоустройство" class="form__option-event">Благоустройство</option>
                     <option value="Согласование" class="form__option-event">Согласование</option>
-                    <option value="Технологический сброс" class="form__option-event">Технологический сброс</option>
                     <option value="Неисправность запорной арматуры" class="form__option-event">Неисправность запорной арматуры</option>
-                    <option value="По распоряжению" class="form__option-event">По распоряжению</option>
                     <option value="Обследование" class="form__option-event">Обследование</option>
                     <option value="Перекладка" class="form__option-event">Перекладка</option>
-                    <option value="Другое" class="form__option-event">Другое</option>
                 </select>
                 @error('type') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
             </div>
@@ -68,7 +65,7 @@
                      @error('city') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
                      <input type="text" class="form__input-address"  class="@error('street') is-invalid @enderror" name="street" placeholder="Улица *">
                      @error('street') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
-                     <input type="text" class="form__input-address" class="@error('building') is-invalid @enderror" name="building" placeholder="Дом *">
+                     <input type="text" class="form__input-address" class="@error('building') is-invalid @enderror" name="building" placeholder="Дом ">
                      @error('building') <div class="form__div-message">* Поле {{ $message }} должно быть заполнено! </div> @enderror
                 </div>
                 <div class="form__map" id="map"></div>
@@ -81,22 +78,6 @@
             <div class="form__item-right">
                 <p class="form__p">Закрепленный участок:</p>
                 <input type="text" class="form__input-area" name="cityarea" placeholder="Район города">
-                <select name="works" class="form__select-event">
-                    <option value="" class="form__option-event" selected disabled>Добавить работы</option>
-                    <option value="Устранение утечки" class="form__option-event">Устранение утечки</option>
-                    <option value="Согласование" class="form__option-event">Согласование</option>
-                    <option value="Технологический сброс" class="form__option-event">Технологический сброс</option>
-                    <option value="Колодцы" class="form__option-event">Колодцы</option>
-                    <option value="Люки" class="form__option-event">Люки</option>
-                    <option value="Технологическое присоединение" class="form__option-event">Технологическое присоединение</option>
-                    <option value="Благоустройство" class="form__option-event">Благоустройство</option>
-                    <option value="Перекрытие" class="form__option-event">Перекрытие</option>
-                    <option value="Задвижки" class="form__option-event">Задвижки</option>
-                    <option value="Асфальт" class="form__option-event">Асфальт</option>
-                    <option value="Перекладка" class="form__option-event">Перекладка</option>
-                    <option value="Обследование" class="form__option-event">Обследование</option>
-                    <option value="Другое" class="form__option-event">Другое</option>
-                </select>
                    <input name="image" class="form__input-upload" multiple type="file" accept="image/*, .png, .jpg, .jpeg" />
             </div>
             <div class="form__button-wrapper">

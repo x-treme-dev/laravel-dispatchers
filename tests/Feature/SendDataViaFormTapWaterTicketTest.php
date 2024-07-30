@@ -40,7 +40,7 @@ class SendDataOfFormToTapWaterTicketControllerTest extends TestCase
         'addressmap' => '',
         'notes' => 'test',
         'cityarea' => 'Центр',
-        'works' => 'test',
+        //'works' => 'test',
         //тестирование загрузки файла
         'file' => $file = UploadedFile::fake()->image('random.jpg'),
      ]);

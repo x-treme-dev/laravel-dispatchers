@@ -14,7 +14,7 @@ class TicketEditController extends Controller
     $ticket_id = $ticket_id;
     // получить строку по id
     $rowTicket = DB::table('tapwaterticket_feodosia')->where('tapwaterticket_id', $ticket_id)->first();
-    //dump($rowTicket);
+   // dump($rowTicket);
     return view('ticketedit', compact('service', 'ticket_id', 'rowTicket'))->with('rowTicket', $rowTicket);
       
  }

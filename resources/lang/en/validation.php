@@ -176,7 +176,6 @@ return [
         'description' => 'Описание события',
         'city' => 'Город',
         'street' => 'Улица',
-        'building' => 'Номер дома',
         'addressmap' => 'Яндекс Карты'
     ],
 

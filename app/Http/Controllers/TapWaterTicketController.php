@@ -26,7 +26,6 @@ class TapWaterTicketController extends Controller
         $tapwaterticket -> addressmap = $request -> addressmap; 
         $tapwaterticket -> notes = $request -> notes;
         $tapwaterticket -> cityarea = $request -> cityarea;
-        $tapwaterticket -> works = $request -> works;
         //to write path of file to table
         if($request -> hasFile('image')){
             $image = $request -> file('image');

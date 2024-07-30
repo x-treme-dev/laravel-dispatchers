@@ -29,7 +29,6 @@ class CreateTapwaterticketFeodosiaTable extends Migration
             $table->string('addressmap')->nullable();
             $table->string('notes')->nullable();
             $table->string('cityarea')->nullable();
-            $table->string('works')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });
