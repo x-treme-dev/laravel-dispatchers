@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTapWaterTicketRequest;
 use Illuminate\Support\Facades\DB;
-use App\Models\TapWaterTicketFeodosia;
+use App\Models\TapWaterTicket;
 
 class TapWaterTicketController extends Controller
 {
     // получение данных из формы и запись в таблицу
     public function store(StoreTapWaterTicketRequest $request){
       
-        $tapwaterticket = new TapWaterTicketFeodosia();
+        $tapwaterticket = new TapWaterTicket();
         $tapwaterticket -> date =  $request-> date;
         $tapwaterticket -> time = $request-> time;
         $tapwaterticket -> type = $request-> type;
@@ -35,7 +35,7 @@ class TapWaterTicketController extends Controller
 
         $tapwaterticket -> save();
        // to get 10 latest rows 
-        $last_ticket = DB::table('tapwaterticket_feodosia')->orderBy('tapwaterticket_id', 'DESC')->take(10)->first();
+        $last_ticket = DB::table('tapwaterticket')->orderBy('id', 'DESC')->take(10)->first();
         // передать данные о последней записи в сообщение пользователю при создании заявки
         return view('/message')->with('last_ticket', $last_ticket);
     }

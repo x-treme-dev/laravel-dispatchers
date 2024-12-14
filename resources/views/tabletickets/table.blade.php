@@ -26,7 +26,7 @@
                 </tr>
            @endif
             <tr class="table__row">
-                <td class="table__data" data-label="Заявка №">{{ $rowTickets->tapwaterticket_id}}</td>
+                <td class="table__data" data-label="Заявка №">{{ $rowTickets->id}}</td>
                 <td class="table__data" data-label="Время регистрации:">{{ $rowTickets->time }}</td>
                 <td class="table__data" data-label="Тип:">{{ $rowTickets->service }}</td>
                 <td class="table__data" data-label="Адрес:">{{ $rowTickets->district }} {{ $rowTickets->city }} {{ $rowTickets->street }} {{ $rowTickets->building }} {{ $rowTickets->addressmap }}</td>
@@ -36,12 +36,12 @@
                 <td class="table__data" data-label="Время начала работ"></td>
                 <td class="table__data" data-label="Время окончания работ"></td>
                 <td class="table__data" data-label="Опции">
-                    @php $ticket_id = $rowTickets->tapwaterticket_id @endphp
-                    <a class="table__a" href="{{ route('ticketedit', ['ticket_id' => $rowTickets->tapwaterticket_id]) }}">
-                        <img src="{{ asset('css/assets/button-edit-orange.png') }}" title="редактировать заявку №{{ $rowTickets->tapwaterticket_id  }}" class="table__img-edit">
+                    @php $ticket_id = $rowTickets->id @endphp
+                    <a class="table__a" href="{{ route('ticketedit', ['ticket_id' => $rowTickets->id]) }}">
+                        <img src="{{ asset('css/assets/button-edit-orange.png') }}" title="редактировать заявку №{{ $rowTickets->id  }}" class="table__img-edit">
                     </a>
                     <a class="table__a" src="#">
-                        <img src="{{ asset('css/assets/button-done-orange.png') }}" title="закрыть заявку №{{ $rowTickets->tapwaterticket_id  }}" class="table__img-done">
+                        <img src="{{ asset('css/assets/button-done-orange.png') }}" title="закрыть заявку №{{ $rowTickets->id  }}" class="table__img-done">
                     </a>
                 </td>
             </tr>

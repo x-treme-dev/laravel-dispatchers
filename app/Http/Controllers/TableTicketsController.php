@@ -9,7 +9,7 @@ class TableTicketsController extends Controller
     //
     public function getTickets(){
         // сортировака по убыванию даты
-        $tickets = DB::table('tapwaterticket_feodosia')->latest()->get();
+        $tickets = DB::table('tapwaterticket')->latest()->get();
         //dump($tickets);
         return view('tabletickets', ['tickets' => $tickets]);
     }

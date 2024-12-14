@@ -1,8 +1,6 @@
  document.addEventListener('DOMContentLoaded', () => {
     let toggle = true;
 
-    
-
    /*oбработчик формы*/
     toggleMap.addEventListener('click', e => {
      e.preventDefault();
@@ -31,13 +29,22 @@
      mask: "+7(000)000-00-00",
     });
 
-    
-     
-     let inputDate = document.getElementById('date');
-     inputDate.valueAsDate = new Date();
-     let inputTime = document.getElementById('time');
-     inputTime.value = new Date().toLocaleTimeString();
-    
+    //дата 
+     const date = new Date();
+     const year = date.getFullYear();
+     const month = String(date.getMonth() + 1).padStart(2, '0'); // Месяцы начинаются с 0
+     const day = String(date.getDate()).padStart(2, '0');
+     const currentDate =  `${year}-${month}-${day}`;
+     document.getElementById('date').value = currentDate;
+   
+     // время
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const currentTime = `${hours}:${minutes}:${seconds}`;
+      document.getElementById('time').value = currentTime;
+      
      // запрет отправки формы по нажатию клавиши Enter
      document.querySelector('form').addEventListener('keypress', function(event) {
       if (event.key === 'Enter') {

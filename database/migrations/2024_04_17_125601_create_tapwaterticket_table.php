@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTapwaterticketFeodosiaTable extends Migration
+class CreateTapwaterticketTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateTapwaterticketFeodosiaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tapwaterticket_feodosia', function (Blueprint $table) {
-            $table->id('tapwaterticket_id');
+        Schema::create('tapwaterticket', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('filial_id')->nullable();// временно nullable, потом при составлении заявки будет приствоен id филиала
+            $table->foreign('filial_id')->references('id')->on('filials')->onDelete('cascade');
             $table->string('date');
             $table->string('time');
             $table->string('service')->default('Водопровод');
@@ -41,6 +43,6 @@ class CreateTapwaterticketFeodosiaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tapwaterticket_feodosia');
+        Schema::dropIfExists('tapwaterticket');
     }
 }
