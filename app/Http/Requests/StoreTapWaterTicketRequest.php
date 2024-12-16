@@ -24,6 +24,7 @@ class StoreTapWaterTicketRequest extends FormRequest
     public function rules()
     {
         return [
+            'filial_id' => 'nullable',
             'date'=>'required',
             'time'=>'required',
             'type'=>'required',

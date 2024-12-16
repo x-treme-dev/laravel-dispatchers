@@ -2,7 +2,7 @@
 <main>
     <div class='main-resize'>
       <div class="container">
-          @include('update.innerupdate')
+          @include('ticketupdate.innerupdate')
       </div>
     </div>
 </main>

@@ -1,5 +1,5 @@
-<form action="/message" method="POST"  class="form" enctype="multipart/form-data">
-    @csrf
+<form action="{{ route('ticketupdate', ['ticket_id' => $ticket_id])  }}" method="POST"  class="form" enctype="multipart/form-data">
+    @csrf'
         <div class="form__column-left">
             <h2 class="form__h2">Заявка по {{ $service }} № {{ $ticket_id }}</h2>
             <div class="form__item-left">
@@ -19,7 +19,7 @@
             <div class="form__item-left">
                 <p class="form__p">Cобытие:</p>
                 <select name="type" class="form__select-event"  class="@error('type') is-invalid @enderror">
-                    <option value="" class="form__option-event">{{ $rowTicket->type }} *</option>
+                    <option value="{{ $rowTicket->type }}" class="form__option-event">{{ $rowTicket->type }} *</option>
                     <option value="Открытый, поврежденный люк" class="form__option-event">Открытый, поврежденный люк</option>
                     <option value="Ограничено водоснабжение" class="form__option-event">Ограничено водоснабжение</option>
                     <option value="Утечка воды" class="form__option-event">Утечка воды</option>
