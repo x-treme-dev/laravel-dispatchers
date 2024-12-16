@@ -1,0 +1,1 @@
+@extends('update.collector')

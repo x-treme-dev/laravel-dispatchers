@@ -35,7 +35,7 @@ class TapWaterTicketController extends Controller
 
         $tapwaterticket -> save();
        // to get 10 latest rows 
-        $last_ticket = DB::table('tapwaterticket')->orderBy('id', 'DESC')->take(10)->first();
+        $last_ticket = DB::table('tapwatertickets')->orderBy('id', 'DESC')->take(10)->first();
         // передать данные о последней записи в сообщение пользователю при создании заявки
         return view('/message')->with('last_ticket', $last_ticket);
     }

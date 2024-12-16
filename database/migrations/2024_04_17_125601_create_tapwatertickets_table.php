@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTapwaterticketTable extends Migration
+class CreateTapwaterticketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTapwaterticketTable extends Migration
      */
     public function up()
     {
-        Schema::create('tapwaterticket', function (Blueprint $table) {
+        Schema::create('tapwatertickets', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('filial_id')->nullable();// временно nullable, потом при составлении заявки будет приствоен id филиала
             $table->foreign('filial_id')->references('id')->on('filials')->onDelete('cascade');
@@ -43,6 +43,6 @@ class CreateTapwaterticketTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tapwaterticket');
+        Schema::dropIfExists('tapwatertickets');
     }
 }

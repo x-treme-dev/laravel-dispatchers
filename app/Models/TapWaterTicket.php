@@ -12,5 +12,5 @@ class TapWaterTicket extends Model
     use HasFactory;
     //содинить модель с таблицей, передать данные в TapWaterTicketController.php
     public $timestamps = true;
-    protected $table = 'tapwaterticket';
+    protected $table = 'tapwatertickets';
 }
