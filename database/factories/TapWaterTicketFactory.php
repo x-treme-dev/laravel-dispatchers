@@ -3,11 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\TapWaterTicketFeodosia;
+use App\Models\TapWaterTicket;
  
 
 
-class TapWaterTicketFeodosiaFactory extends Factory
+class TapWaterTicketFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,7 +15,7 @@ class TapWaterTicketFeodosiaFactory extends Factory
      * @return array
      */
     //связать фабрику и модель
-     protected $model = TapWaterTicketFeodosia::class;
+     protected $model = TapWaterTicket::class;
 
     public function definition()
     {
@@ -23,10 +23,10 @@ class TapWaterTicketFeodosiaFactory extends Factory
 
         return [
             //генерация фейковых данных для тестирования внешнего вида таблиц
-            'date'=>'13.05.24',
+            'date'=>'2024-12-17',
             'time'=> $this->faker-> time('H:i:s', 'now'),
             'type'=> 'Открытый, поврежденный люк', 
-            'description' => 'тест описание неиспрвности',
+            'description' => 'тест описание неисправности',
             'radio' => (string) $this->faker-> numberBetween(1,3),
             'phone'=> $this->faker->phoneNumber(null, null),
             'district'=>"Тест:",
@@ -36,7 +36,6 @@ class TapWaterTicketFeodosiaFactory extends Factory
             'addressmap'=>'23.2309854, 34.08208523',
             'notes'=>'тест заметки',
             'cityarea'=>'тест центральный район',
-            'works'=>'тест колодцы, люки, задвижки',
             'image'=>'154fldjq5942105812.png',
         ];
     }
