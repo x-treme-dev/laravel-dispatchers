@@ -651,4 +651,78 @@ body{
     }
 }
 
- 
+.entry{
+    &__content{
+        @include flex;
+        justify-content: center;
+        padding-top: $offset-7;
+        background-color: $bg-color-blue;
+    }
+
+    &__wrapper{
+        text-align: center;
+        height: 88vh;
+    }
+
+    &__img{
+        width: 160px;
+        height: auto;
+    }
+    &__h1{
+        font-size: $font-size-all + 0.5em;
+        font-weight: $font-bold;
+        padding-top: $offset-2;
+    }
+    &__li{
+         padding-top: 5%;
+        
+    }
+    &__link{
+        color:black;
+    }
+} 
+
+.about{
+    &__ul{
+        @include flex;
+        @include link;
+        margin-bottom: $offset-2;
+    }
+    &__link{
+        @include link;
+        color:black;
+    }
+    &__content{
+        @include flex;
+        justify-content: center;
+        padding-top: $offset-2;
+        background-color: $bg-color-blue-text;
+    }
+    &__content-group{
+        display: flex;
+    }
+    
+    &__wrapper{
+        text-align: center;
+        width: 85vw;
+    }
+    &__h1{
+        font-size: $font-size-all;
+        padding-top: $offset-2;
+    }
+
+    &__h2{
+        font-size: $button-font-size +0.3em;
+        padding-top: $offset-2;
+    }
+    &__p{
+        padding:$offset-1;
+        text-align: justify; 
+    }
+    &__color{
+        color:red;
+    }
+    &__img-roles-resize{
+        width:818px;
+    }
+}

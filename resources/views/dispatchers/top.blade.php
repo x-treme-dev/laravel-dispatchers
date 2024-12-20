@@ -4,7 +4,7 @@
       <div class="container">
         <div class="top__wrapper">
             <div class="top__logo">
-              <a href="" class="top__a">
+              <a href="#" class="top__a">
                 <img src="{{ asset('css/assets/logo-invert.png') }}" alt="logo" class="top__img">
                 </a> 
                 <div class="top__p-group">

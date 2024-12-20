@@ -20,8 +20,16 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-// Диспетчеры: главная страница
 Route::get('/', function () {
+    return view('entry');
+})->name('entry');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+// Диспетчеры: главная страница
+Route::get('/dispatcher', function () {
     return view('dispatchershome');
 })->name('dispatchershome');
 
