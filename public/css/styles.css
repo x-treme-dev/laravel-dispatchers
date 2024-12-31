@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -561,65 +562,72 @@ body {
     font-weight: bold;
   }
 }
-.entry__content {
+.entry__card {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  justify-content: center;
-  padding-top: 7%;
-  background-color: #8ECBF3;
-}
-.entry__wrapper {
-  text-align: center;
-  height: 88vh;
+  flex-direction: column;
+  padding: 4%;
+  background-color: white;
+  box-shadow: -15px 15px 0 0 #FF4D0F;
 }
 .entry__img {
   width: 160px;
   height: auto;
 }
 .entry__h1 {
-  font-size: 2em;
+  font-size: 2.3em;
   font-weight: 600;
   padding-top: 2%;
 }
-.entry__li {
-  padding-top: 5%;
+.entry__h2 {
+  font-size: 1.5em;
+  padding-top: 2%;
 }
-.entry__link {
-  color: black;
-}
-
-.about__ul {
+.entry__ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  text-decoration: none;
-  margin-bottom: 2%;
 }
-.about__link {
+.entry__link {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
-.about__content {
+
+.about__card {
+  padding: 4%;
+  text-align: center;
+  background-color: white;
+  box-shadow: -15px 15px 0 0 #FF4D0F;
+  margin-bottom: 4%;
+}
+.about__img-position {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
   justify-content: center;
-  padding-top: 2%;
-  background-color: #d6eaf8;
+  margin-bottom: 4%;
+  max-width: 100%; /* Максимальная ширина картинки */
+  min-height: 100%; /* Минимальная высота картинки */
+  -o-object-fit: cover;
+     object-fit: cover; /* Всю, выше указанную, облась заполнить картинкой */
 }
-.about__content-group {
+.about__ul {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
-.about__wrapper {
-  text-align: center;
-  width: 85vw;
+.about__link {
+  text-decoration: none;
+  color: #fff;
 }
 .about__h1 {
   font-size: 1.5em;
@@ -636,6 +644,7 @@ body {
 .about__color {
   color: red;
 }
-.about__img-roles-resize {
-  width: 818px;
+.about__img {
+  width: 160px;
+  height: auto;
 }
